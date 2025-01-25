@@ -10,16 +10,6 @@ omada_filename=$(basename $omada_url .tar.gz)
 # Install dependencies
 apt install -y wget curl gnupg gpg openjdk-17-jre-headless jsvc
 
-# Add mongodb repository
-curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-4.4.gpg
-echo "deb [signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg] https://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-
-# Install mongodb
-apt update
-apt install -y mongodb-org
-systemctl start mongodb
-systemctl enable mongodb
-      
 if [ -f libssl1.1_1.1.1w-0+deb11u2_amd64.deb ]; then
   dpkg -i libssl1.1_1.1.1w-0+deb11u2_amd64.deb
 else
@@ -31,6 +21,18 @@ else
   fi
   dpkg -i libssl1.1_1.1.1w-0+deb11u2_amd64.deb
 fi
+
+# Add mongodb repository
+curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-4.4.gpg
+echo "deb [signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg] https://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+
+# Install mongodb
+apt update
+apt install -y mongodb-org
+systemctl start mongodb
+systemctl enable mongodb
+      
+
 
 wget $omada_url
 
