@@ -5,7 +5,7 @@ omada_url="https://static.tp-link.com/upload/software/2025/202501/20250109/Omada
 # Extract the filename without the extension
 omada_filename=$(basename $omada_url)
 
-mongodb_url="https://repo.mongodb.org/apt/debian/dists/bookworm/mongodb-org/8.0/main/binary-amd64/mongodb-org-server_8.0.4_amd64.deb"
+mongodb_url="https://repo.mongodb.org/apt/debian/dists/bookworm/mongodb-org/7.0/main/binary-amd64/mongodb-org-server_7.0.16_amd64.deb"
 mongodb_filename=$(basename $mongodb_url)
 
 
