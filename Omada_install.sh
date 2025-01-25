@@ -29,8 +29,8 @@ echo "deb [signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg] https://repo.mo
 # Install mongodb
 apt update
 apt install -y mongodb-org
-systemctl start mongodb
-systemctl enable mongodb
+systemctl start mongod
+systemctl enable mongod
       
 
 
