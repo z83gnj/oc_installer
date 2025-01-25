@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Omada Controller installation script for Debian
-#omada_url="https://static.tp-link.com/upload/software/2024/202412/20241224/Omada_SDN_Controller_v5.15.6.7_linux_x64.tar.gz"
 omada_url="https://static.tp-link.com/upload/software/2025/202501/20250109/Omada_SDN_Controller_v5.15.8.2_linux_x64.deb"
-
-# Extract the filename without the extension
 omada_filename=$(basename $omada_url .tar.gz)
 
 # Install dependencies
@@ -31,8 +27,6 @@ apt update
 apt install -y mongodb-org
 systemctl start mongod
 systemctl enable mongod
-      
-
 
 wget $omada_url
 

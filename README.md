@@ -1,4 +1,7 @@
-Omada Software Controller install script for debian based linux.
+# Omada Software Controller install script
+This script install Omada Software Controller and its dependencies on debian based linux systems.
+
+Dependencies of the Omada Software Controller
 
 Additional task:
 Install PiHole
