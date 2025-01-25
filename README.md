@@ -4,8 +4,8 @@ This script install Omada Software Controller and its dependencies on debian bas
 **Installed version: Omada_SDN_Controller_v5.15.8.2**
 
 ## Dependencies of the Omada Software Controller
-- MongoDB << 7.1.0 (Installed V7.0.16 or V4.4)
-- Java Runtime Environment (Installed JRE_V17) 
+- MongoDB << 7.1.0 (Install V7.0.16 or V4.4)
+- Java Runtime Environment (Install JRE_V17) 
 - curl and jsvc
 
  ## Start script
