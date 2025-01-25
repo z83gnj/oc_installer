@@ -10,7 +10,8 @@ mongodb_filename=$(basename $mongodb_url)
 
 
 # Install dependencies
-apt install -y wget curl gnupg gpg openjdk-17-jre-headless jsvc
+apt install -y wget curl openjdk-17-jre-headless jsvc
+# apt install -y wget curl gnupg gpg openjdk-17-jre-headless jsvc
 
 # if [ -f libssl1.1_1.1.1w-0+deb11u2_amd64.deb ]; then
 #   dpkg -i libssl1.1_1.1.1w-0+deb11u2_amd64.deb
