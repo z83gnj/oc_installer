@@ -33,6 +33,7 @@ fi
 
 wget $omada_url
 
+chmod +x $omada_filename
 dpkg -i $omada_filename
 
 # tar -xvzf $omada_filename.tar.gz
