@@ -31,8 +31,6 @@ else
   dpkg -i libssl1.1_1.1.1w-0+deb11u2_amd64.deb
 fi
 
-mkdir -p ~/tmp
-cd ~/tmp
 wget $omada_url
 
 dpkg -i $omada_filename
